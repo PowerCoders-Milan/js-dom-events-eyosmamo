@@ -24,13 +24,13 @@ console.log(list);
 //       Make the function summarizePoints() return it
 const summarizePoints = () => {
   // TODO: return the sum
-  const list = document.querySelectorAll("tr");
+  const list = document.querySelectorAll("tbody tr");
   let sum = 0;
   list.forEach((li) => {
     let td = li.querySelectorAll("tr td");
-    sum += parseInt(td[2]);
-    return sum;
+    sum += parseInt(td[2].innerHTML);
   })
+  return sum;
 }
 
 
